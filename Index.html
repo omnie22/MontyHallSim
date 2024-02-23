@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Monty's Hell</title>
+    </header>
+    <h1>Monty's Hell</h1>
+    <h3>select a number of doors and how many games you'd like to play, and it will simulate that many games of the Monty Hall problem and tell you the results</h3>
+    <p style="font-weight: bold;">number of games: <input size="6"type="number" id="inputHowManyGames"/></p>
+    <p style="font-weight: bold;">number of doors: <input size="7"type="number" id="inputHowManyDoors"/></p>
+    <button id="simulateNoSwapBtn">simulate no swap</button> <button id="simulateSwapBtn">simulate swap</button>
+    <p id="simulationResults">
+    </p>
+    <hr>
+    <footer>
+        <h4>How Does This Work?</h4>
+        <p style="width: 50%;">at first it appears as though the probability is 50/50, there's two doors and one is a winning door and the other is a losing door, however, due to the fact that you are more likely to pick an incorrect door the first time, it is more likely for the alternative door to be a winner, this becomes very clear as you add more and more doors</p>
+    <p style="font-size: x-small;">if you don't know what the Monty Hall problem is, google it idk</p>
+    </footer>
+    <script src="script.js"></script>
+</html>
