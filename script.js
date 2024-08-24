@@ -2,15 +2,17 @@ let doors =[];
 
 //grabs the games and doors and begins running the sim, defaults to 100 games and doors
 document.getElementById("simulateNoSwapBtn").addEventListener("click", function(event) {
-    let games = setGames();
-    let numberOfDoors = setDoors();
-    playMultipleGames(event, false, games, numberOfDoors);
+    handleButtonClick(event, false);
 });
 document.getElementById("simulateSwapBtn").addEventListener("click", function(event) {
+    handleButtonClick(event, true);
+});
+
+function handleButtonClick(event, shouldSwap) {
     let games = setGames();
     let numberOfDoors = setDoors();
-    playMultipleGames(event, true, games, numberOfDoors);
-});
+    playMultipleGames(event, shouldSwap, games, numberOfDoors);
+}
 
 // randomizes the numbers behind the doors
 function shuffleDoors(array = doors) {
